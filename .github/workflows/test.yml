@@ -15,8 +15,6 @@ jobs:
           java-version: 8
           cache: maven
           distribution: temurin
-      - name: Install
-        run: mvn clean install -Dmaven.test.skip=true
       - name: Build with Maven
         run: mvn clean package -Dmaven.test.skip=true
       - name: Test
