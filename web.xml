@@ -1,0 +1,5 @@
+<!-- 打开springMVC静态资源拦截器，不拦截swagger下的资源 -->
+<servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>/swagger/*</url-pattern>
+</servlet-mapping>

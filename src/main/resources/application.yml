@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  #出现错误时, 直接抛出异常(便于异常统一处理，否则捕获不到404)
+  mvc:
+    throw-exception-if-no-handler-found: true
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  #不要为我们工程中的资源文件建立映射
+  resources:
+    add-mappings: true
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss.SSS
+#    time-zone: GMT+8
