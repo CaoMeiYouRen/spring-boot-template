@@ -18,11 +18,11 @@ public class JsonConfig {
         ObjectMapper mapper = new ObjectMapper();
 
         // Date格式
-//        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        // mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         // 取消时间的转化格式,默认是时间戳,可以取消,同时需要设置要表现的时间格式
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
         TimeZone tz = TimeZone.getTimeZone("UTC");
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         df.setTimeZone(tz);
         mapper.setDateFormat(df);
 
