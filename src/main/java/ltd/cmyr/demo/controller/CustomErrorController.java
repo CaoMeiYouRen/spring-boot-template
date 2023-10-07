@@ -34,9 +34,7 @@ public class CustomErrorController extends BasicErrorController {
     public ResponseEntity error(HttpServletRequest request) {
         String method = request.getMethod();
         String path = request.getRequestURI();
-        ResponseData data = new ResponseData();
-        data.setStatusCode(404);
-        data.setMessage("Cannot " + method + " " + path);
+        ResponseData data = new ResponseData(404, String.format("Cannot %s %s", method, path));
         return ResponseEntity.status(404).body(data);
     }
 

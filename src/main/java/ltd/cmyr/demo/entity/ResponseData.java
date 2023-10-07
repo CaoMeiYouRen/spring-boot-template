@@ -58,23 +58,26 @@ public class ResponseData<T extends Object> {
         return statusCode;
     }
 
-    public void setStatusCode(int statusCode) {
+    public ResponseData<T> setStatusCode(int statusCode) {
         this.statusCode = statusCode;
+        return this;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public ResponseData<T> setMessage(String message) {
         this.message = message;
+        return this;
     }
 
     public T getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public ResponseData<T> setData(T data) {
         this.data = data;
+        return this;
     }
 }
