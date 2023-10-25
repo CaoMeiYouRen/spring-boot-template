@@ -19,6 +19,6 @@ spring:
   #不要为我们工程中的资源文件建立映射
   resources:
     add-mappings: true
-#  jackson:
-#    date-format: yyyy-MM-dd HH:mm:ss.SSS
-#    time-zone: GMT+8
+logging:
+  level:
+    root: info

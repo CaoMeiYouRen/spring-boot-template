@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-
     /**
      * 404处理
      *
